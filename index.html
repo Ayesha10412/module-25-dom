@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <main id="main-container">
+    <section>
+        <h1>My first header</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, placeat.</p>
+    <h2>My second header</h2>
+ <ul>
+    <li>paragraph</li>
+    <li>essay</li>
+    <li>letter</li>
+ </ul>
+    </section>
+  <section class="fruit-container">
+    <h1 id="fruits-title">Fruits I like</h1>
+    <ul>
+        <li>mango</li>
+        <li>lichi</li>
+        <li>Jack fruit</li>
+        <li>Guava</li>
+    </ul>
+  </section>
+  <section class="place-container">
+    <h1 id="places-title">Places I like to visit</h1>
+    <ul id="places-list">
+        <li class="important-places">sundarban</li>
+        <li class="important-places" >bandarban</li>
+        <li class="important-places">rangamati</li>
+        <li class="important-places">patuakhali</li>
+    </ul>
+  </section>
+  </main>
+  <script src="./js/dom.js"></script>
+  <script src="./stylejs.js"></script>
+  <script>
+    const liCollection= document.getElementsByTagName('li');
+    // console.log(liCollection);
+    for(const li of liCollection){
+        // console.log(li.innerText);
+    }
+    const header=document.getElementsByTagName('h1');
+    // console.log(header);
+    for(const h1 of header){
+        // console.log(h1.innerText);
+    }
+const fruitsTitle=document.getElementById('fruits-title');
+fruitsTitle.innerText="Fruits changed by JS";
+    const places=document.getElementsByClassName('important-places');
+    for(const place of places){
+        // console.log(place.innerText);
+    }
+    const fruit=document.querySelector('.fruit-container li')
+    console.log(fruit);
+    const title=document.getElementById('fruits-title');
+    title.setAttribute('title', 'tooltip set by javascript');
+  </script>
+</body>
+</html>
